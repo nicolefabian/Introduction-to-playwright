@@ -1,9 +1,9 @@
-import {type Locator, type Page,expect} from '@playwright/test';
+import {type Locator, type Page,expect} from '@playwright/test'; //locator -> represents elements on a page(buttons, links)
 
 //creating a class
 export class HomePage {
     //variables
-    readonly page:Page;
+    readonly page:Page; //Page is a class that represents a single tab or browser window and contains methods and properties to interact with the webpoage
     //await page.getByRole('link', { name: 'Get started' }).click();
     readonly getStartedButton: Locator;
     //await expect(page).toHaveTitle(/Playwright/);

@@ -1,6 +1,7 @@
-import { test, expect, Page } from '@playwright/test';
+import { test, expect, Page } from '@playwright/test'; //test -> to define test, expect for assertions, Page -> represents a webpage to interact with the page 
 import {HomePage} from '../pages/home-page';
 
+//MAIN TEST FILE  
 //AAA Pattern
 //Arrange
 //Act
@@ -14,11 +15,11 @@ import {HomePage} from '../pages/home-page';
 //top heading, content, footer, login form, etc.
 
 const url = 'https://playwright.dev/';
-let homePage:HomePage;
+let homePage:HomePage; //storing an instance or object of type of the HomePage class to access its methods and properties
 
 test.beforeEach(async ({ page }) => {
-    await page.goto(url);
-    homePage = new HomePage(page);
+    await page.goto(url); // Navigate to the website before each test.
+    homePage = new HomePage(page);// Create a new `HomePage` object using the current page to interact with the page.
 
 });
 
@@ -28,6 +29,7 @@ async function clickGetStarted(page:Page){
 }
 
 //-------------------TESTS-------------------
+//group related tests together
 test.describe('Playwright website', () => {
     test('has title', async ({ page }) => {
         test('has title', async () => {
